@@ -2,4 +2,151 @@
 @import url("card.css");
 @import url("footer.css");
 
+<style>
+  .animated {
+            -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s; 
+            /*animation-timing-function: steps(10);*/
+            -webkit-animation-fill-mode: both; 
+            animation-fill-mode: both; 
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite
+            -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+         }
+         
+         @-webkit-keyframes tada { 
+            0% {-webkit-transform: scale(1.2);}
+            10%, 20% {-webkit-transform: scale(1) rotate(-5deg);} 
+            30%, 50%, 70%, 90% {-webkit-transform: scale(1.6) rotate(5deg);}
+            40%, 60%, 80% {-webkit-transform: scale(1.6) rotate(-5deg);} 
+            100% {-webkit-transform: scale(1.2) rotate(0);} 
+         }
+         
+         @keyframes tada { 
+            0% {transform: scale(1.2);} 
+            10%, 20% {transform: scale(1) rotate(-5deg);} 
+            30%, 50%, 70%, 90% {transform: scale(1.6) rotate(5deg);} 
+            40%, 60%, 80% {transform: scale(1.6) rotate(-5deg);} 
+            100% {transform: scale(1.2) rotate(0);}
+         }
+          
+       /*   @-webkit-keyframes tada {
+              from {
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+              }
 
+              10%,
+              20% {
+                -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+                transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+              }
+
+              30%,
+              50%,
+              70%,
+              90% {
+                -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+                transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+              }
+
+              40%,
+              60%,
+              80% {
+                -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+                transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+              }
+
+              to {
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+              }
+            }
+
+            @keyframes tada {
+              from {
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+              }
+
+              10%,
+              20% {
+                -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+                transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+              }
+
+              30%,
+              50%,
+              70%,
+              90% {
+                -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+                transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+              }
+
+              40%,
+              60%,
+              80% {
+                -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+                transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+              }
+
+              to {
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+              }
+            }*/
+
+         .tada { 
+            -webkit-animation-name: tada; 
+            animation-name: tada; 
+         }
+         /*.clr{fill:#44bd93;}*/
+
+         .clr {animation: col 1s infinite;}
+            @keyframes col {
+            0%,20% {fill:#78C71D}
+            20%,80% {fill:#6bb319;}
+            80%,100% {fill:#78C71D}
+          }
+
+          .star-five {
+            margin: 50px 0;
+            position: relative;
+            display: block;
+            color: red;
+            width: 0px;
+            height: 0px;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid red;
+            border-left: 100px solid transparent;
+            transform: rotate(35deg);
+          }
+          .star-five:before {
+            border-bottom: 80px solid red;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            position: absolute;
+            height: 0;
+            width: 0;
+            top: -45px;
+            left: -65px;
+            display: block;
+            content: '';
+            transform: rotate(-35deg);
+          }
+          .star-five:after {
+            position: absolute;
+            display: block;
+            color: red;
+            top: 3px;
+            left: -105px;
+            width: 0px;
+            height: 0px;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid red;
+            border-left: 100px solid transparent;
+            transform: rotate(-70deg);
+            content: '';
+          }      
+</style>
